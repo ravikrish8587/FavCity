@@ -1,25 +1,260 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FavCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LA" translatesAutoresizingMaskIntoConstraints="NO" id="a66-DR-adX">
+                                <frame key="frameInset" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vuj-5o-rLG">
+                                <frame key="frameInset" minX="20" minY="40" width="140" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los Angeles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVm-d8-NJE">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entertainment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bn5-f3-6F8">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1uo-1R-po7">
+                                <frame key="frameInset" minX="135" minY="298" width="122" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUM-rs-Exh">
+                                        <color key="backgroundColor" red="0.96101641410000005" green="0.10358869280000001" blue="0.13650204129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="About">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="bAa-cx-kfF" kind="show" id="AHE-jf-ZmA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKZ-Jr-oRC">
+                                        <color key="backgroundColor" red="0.96101641410000005" green="0.10358869280000001" blue="0.13650204129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="hP2-EQ-5mg"/>
+                                            <constraint firstAttribute="width" constant="122" id="jRh-We-Ig0"/>
+                                        </constraints>
+                                        <state key="normal" title="Photos">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzU-hu-yh4">
+                                        <color key="backgroundColor" red="0.96101641410000005" green="0.10358869280000001" blue="0.13650204129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="VYS-ov-mOl"/>
+                                            <constraint firstAttribute="width" constant="122" id="cyg-rN-Lw7"/>
+                                        </constraints>
+                                        <state key="normal" title="LA News">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="M5o-Wf-Gbu" kind="show" id="ne5-B0-cgS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1uo-1R-po7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7yO-XR-poB"/>
+                            <constraint firstItem="a66-DR-adX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E0a-zG-2h1"/>
+                            <constraint firstItem="a66-DR-adX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rwb-uZ-MgX"/>
+                            <constraint firstItem="vuj-5o-rLG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ubm-9q-BdO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1uo-1R-po7" secondAttribute="trailing" constant="20" id="oTx-rh-wf1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a66-DR-adX" secondAttribute="bottom" id="oUT-Sd-VJZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1uo-1R-po7" secondAttribute="bottom" constant="90" id="qaD-td-0aR"/>
+                            <constraint firstItem="vuj-5o-rLG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="t2K-Q8-qMZ"/>
+                            <constraint firstAttribute="trailing" secondItem="a66-DR-adX" secondAttribute="trailing" id="wUp-Qs-aA2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7yO-XR-poB"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="332" y="387"/>
+        </scene>
+        <!--AboutVC-->
+        <scene sceneID="VLy-gP-VNa">
+            <objects>
+                <viewController id="bAa-cx-kfF" customClass="AboutVC" customModule="FavCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s8B-Bd-lko"/>
+                        <viewControllerLayoutGuide type="bottom" id="pLO-4O-9Ch"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vrc-nE-Rfq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ju-wE-jAN">
+                                <frame key="frameInset" minY="421" width="375" height="139"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yoh-fG-vpO">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxK-6q-ku6">
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4H-gf-xU3">
+                                                <string key="text">officially the City of Los Angeles and often known by its initials L.A., is the second-largest city in the United States after New York City, the most populous city in the state of California, and the county seat of Los Angeles County.</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ezI-Ev-3Pp">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-2A-duW">
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewe-7B-mtB">
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" misplaced="YES" image="hollywood" translatesAutoresizingMaskIntoConstraints="NO" id="Z2M-lG-rbY">
+                                <frame key="frameInset" width="600" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="8zY-WJ-rZM"/>
+                                    <constraint firstAttribute="height" constant="215" id="9NG-Mo-jFU"/>
+                                    <constraint firstAttribute="height" constant="215" id="Fmk-JH-x8R"/>
+                                    <constraint firstAttribute="width" constant="200" id="IHk-9B-rbY"/>
+                                    <constraint firstAttribute="width" constant="300" id="Tnl-g1-51S">
+                                        <variation key="heightClass=compact" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8zY-WJ-rZM"/>
+                                        <exclude reference="9NG-Mo-jFU"/>
+                                        <exclude reference="IHk-9B-rbY"/>
+                                        <exclude reference="Tnl-g1-51S"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="8zY-WJ-rZM"/>
+                                        <exclude reference="9NG-Mo-jFU"/>
+                                        <exclude reference="Fmk-JH-x8R"/>
+                                        <include reference="IHk-9B-rbY"/>
+                                        <exclude reference="Tnl-g1-51S"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3ju-wE-jAN" firstAttribute="top" secondItem="s8B-Bd-lko" secondAttribute="bottom" constant="205" id="39t-u4-b8j">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="3ju-wE-jAN" firstAttribute="top" secondItem="Z2M-lG-rbY" secondAttribute="bottom" id="AJb-0b-i2r"/>
+                            <constraint firstItem="3ju-wE-jAN" firstAttribute="top" secondItem="Z2M-lG-rbY" secondAttribute="bottom" constant="10" id="Fv3-et-kvi"/>
+                            <constraint firstItem="3ju-wE-jAN" firstAttribute="leading" secondItem="vrc-nE-Rfq" secondAttribute="leading" constant="10" id="Law-EI-zAp">
+                                <variation key="heightClass=compact" constant="310"/>
+                            </constraint>
+                            <constraint firstItem="Z2M-lG-rbY" firstAttribute="top" secondItem="3ju-wE-jAN" secondAttribute="bottom" constant="100" id="Mlj-Ok-qyk"/>
+                            <constraint firstAttribute="trailing" secondItem="Z2M-lG-rbY" secondAttribute="trailing" id="SLc-zD-VxX">
+                                <variation key="heightClass=compact" constant="400"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="3ju-wE-jAN" secondAttribute="trailing" id="Tbo-sY-eh8"/>
+                            <constraint firstItem="Z2M-lG-rbY" firstAttribute="leading" secondItem="vrc-nE-Rfq" secondAttribute="leading" id="YNb-R5-Qjs"/>
+                            <constraint firstItem="3ju-wE-jAN" firstAttribute="leading" secondItem="vrc-nE-Rfq" secondAttribute="leading" id="ZUA-yt-n8c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3ju-wE-jAN" secondAttribute="trailing" id="Zm3-fL-XW3"/>
+                            <constraint firstItem="pLO-4O-9Ch" firstAttribute="top" secondItem="Z2M-lG-rbY" secondAttribute="bottom" constant="185" id="f5g-1Y-jos">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Z2M-lG-rbY" firstAttribute="top" secondItem="vrc-nE-Rfq" secondAttribute="top" id="lxB-VQ-IgR"/>
+                            <constraint firstItem="3ju-wE-jAN" firstAttribute="leading" secondItem="Z2M-lG-rbY" secondAttribute="trailing" constant="-300" id="tkJ-F4-uR7">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mlj-Ok-qyk"/>
+                                <exclude reference="39t-u4-b8j"/>
+                                <exclude reference="AJb-0b-i2r"/>
+                                <exclude reference="Law-EI-zAp"/>
+                                <exclude reference="Zm3-fL-XW3"/>
+                                <exclude reference="tkJ-F4-uR7"/>
+                                <exclude reference="f5g-1Y-jos"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="SLc-zD-VxX"/>
+                                <include reference="39t-u4-b8j"/>
+                                <exclude reference="AJb-0b-i2r"/>
+                                <exclude reference="Fv3-et-kvi"/>
+                                <include reference="Law-EI-zAp"/>
+                                <exclude reference="Tbo-sY-eh8"/>
+                                <exclude reference="ZUA-yt-n8c"/>
+                                <include reference="Zm3-fL-XW3"/>
+                                <exclude reference="tkJ-F4-uR7"/>
+                                <include reference="f5g-1Y-jos"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="aboutDescriptionLbl" destination="J4H-gf-xU3" id="XOP-0i-tjj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ckx-y3-gcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="387"/>
+        </scene>
+        <!--NewsVC-->
+        <scene sceneID="5dc-Zn-d0G">
+            <objects>
+                <viewController id="M5o-Wf-Gbu" customClass="LANewsVC" customModule="FavCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vol-sO-me9"/>
+                        <viewControllerLayoutGuide type="bottom" id="PPV-WL-CH9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a7Z-zL-ai8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5w-Fo-ce2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="1058"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LA" width="1920" height="1200"/>
+        <image name="hollywood" width="1280" height="721"/>
+    </resources>
 </document>
